@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1 #{title}
+    hr
+    br
+    ul.list-group
+        each movie, i in movies
+            li.list-group-item
+                a(href="/movies/"+movie.genre)= movie.movie_upload + movie.movie_title

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1= movie.movie_upload
+    br
+    hr
+    br
+    p My Favorite Movie: #{movie.movie_title}
+    p Genre: #{movie.genre}
+    p Year Released: #{movie.year_released}
+    p Language Of My Movie: #{movie.movie_language}
+    p The Length Of My Movie: #{movie.movie_length}
+    a.btn.btn-success(href='/movies/edit/'+movie.genre) Edit Movie
+    a.btn.btn-danger.delete-movie(href='#', data-genre=movie.genre) Delete Movie
+    br

@@ -1,0 +1,44 @@
+extends layout
+
+block content
+    h1 #{title}
+    hr
+    br
+    form(method='POST', action='/movies/edit/'+movie.genre)
+        #form-group
+            .lbl
+                label Upload A Movie: 
+            .inpt
+                input.form-control(name='movie_upload', type='file' value=movie.movie_upload)
+        br
+        #form-group
+            .lbl
+                label Movie Title: 
+            .inpt
+                input.form-control(name='movie_title', type='text' value=movie.movie_title)
+        br
+        #form-group
+            .lbl
+                label Genre: 
+            .inpt
+                input.form-control(name='genre', type='text' value=movie.genre)
+        br
+        #form-group
+            .lbl
+                label Year Released: 
+            .inpt
+                input.form-control(name='year_released', type='number' value=movie.year_released)
+        br
+        #form-group
+            .lbl
+                label Movie Language: 
+            .inpt
+                input.form-control(name='movie_language', type='text' value=movie.movie_language)
+        br
+        #form-group
+            .lbl
+                label Movie Length: 
+            .inpt
+                input.form-control(name='movie_length', type='text' value=movie.movie_length)
+        br
+        input.btn.btn-primary(type='submit', value='Submit')

@@ -1,0 +1,46 @@
+extends layout
+
+block content
+    br
+    form(method='POST', action='/movies/add')
+        legend
+          p Upload A Movie:
+        #form-group
+            .lbl
+                label Choose a Movie: 
+            .inpt
+                input.form-control(name='movie_upload', type='file')
+        br
+        #form-group
+            .lbl
+                label Movie Title: 
+            .inpt
+                input.form-control(name='movie_title', type='text')
+        br
+        #form-group
+            .lbl
+                label Genre: 
+            .inpt
+                input.form-control(name='genre', type='text')
+        br
+        #form-group
+            .lbl
+                label Year Released: 
+            .inpt
+                input.form-control(name='year_released', type='date')
+        br
+        #form-group
+            .lbl
+                label Movie Language: 
+            .inpt
+                input.form-control(name='movie_language', type='text')
+        br
+        #form-group
+            .lbl
+                label Movie Length: 
+            .inpt
+                input.form-control(name='movie_length', type='text')
+        br
+    
+        input.btn.btn-danger(type='reset' value='Reset')
+        input.btn.btn-primary(type='submit', value='Submit')
